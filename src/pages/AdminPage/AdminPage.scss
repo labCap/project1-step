@@ -1,1 +1,45 @@
+.admin-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
+  &__inner {
+    // min-height: 400px;
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 35px 0px rgba(173, 216, 230, 0.1);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .add-btn {
+      margin-left: auto;
+    }
+  }
+}
+
+.user-name {
+}

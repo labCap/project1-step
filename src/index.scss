@@ -24,6 +24,31 @@ a {
   }
 }
 
+input {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid #333;
+
+  &::placeholder {
+    text-transform: capitalize;
+  }
+}
+
+textarea {
+  resize: vertical;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid #333;
+
+  &::placeholder {
+    text-transform: capitalize;
+  }
+}
+
 button {
   color: #fff;
 }
@@ -43,18 +68,6 @@ button {
     line-height: 100%;
     margin-bottom: 25px;
     letter-spacing: 2.5px;
-  }
-
-  input {
-    padding: 10px 15px;
-    color: #fff;
-    background-color: transparent;
-    border-radius: 10px;
-    border: 1px solid #333;
-
-    &::placeholder {
-      text-transform: capitalize;
-    }
   }
 
   a {

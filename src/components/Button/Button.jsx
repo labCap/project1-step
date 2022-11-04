@@ -1,9 +1,9 @@
 import React from "react";
 import "./Button.scss";
 
-export const Button = ({ children, func }) => {
+export const Button = ({ children, func, className }) => {
   return (
-    <button className="button" onClick={func}>
+    <button className={className} onClick={func}>
       <span>{children}</span>
     </button>
   );
