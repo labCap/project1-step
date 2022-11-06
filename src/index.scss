@@ -18,10 +18,6 @@ code {
 
 a {
   color: rgb(173, 216, 230);
-
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 input {
@@ -67,6 +63,11 @@ button {
   overflow: hidden;
 }
 
+.error {
+  color: tomato;
+  text-align: center;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -87,5 +88,8 @@ button {
   a {
     text-decoration: underline;
     margin: 0 0 0 5px;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
