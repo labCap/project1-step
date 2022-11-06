@@ -11,13 +11,13 @@ export const AdminPage = () => {
           <div className="user-name">Danya</div>
           <Button func={() => null}>Log Out</Button>
         </div>
-        <div className="admin-page__body">
+        <form className="admin-page__body">
           <Input type={"text"} placeholder={"article title"} />
           <textarea placeholder="article..."></textarea>
           <Button func={() => null} className={"add-btn"}>
             Add
           </Button>
-        </div>
+        </form>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import "./LogIn.scss";
 export const LogIn = () => {
   return (
     <div className="log-in">
-      <div className="form">
+      <form className="form">
         <h2>authorization</h2>
         <Input type={"email"} placeholder={"Email"} />
         <Input type={"password"} placeholder={"Password"} />
@@ -17,7 +17,7 @@ export const LogIn = () => {
         <span>
           Don't have an account? Create it <Link to={"/sign-in"}>Sign In</Link>
         </span>
-      </div>
+      </form>
     </div>
   );
 };

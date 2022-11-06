@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 15px;
 
   &__inner {
     // min-height: 400px;
@@ -42,4 +43,8 @@
 }
 
 .user-name {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: gold;
 }

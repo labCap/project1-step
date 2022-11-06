@@ -30,9 +30,14 @@ input {
   background-color: transparent;
   border-radius: 10px;
   border: 1px solid #333;
+  transition: all 0.3s ease-in-out;
 
   &::placeholder {
     text-transform: capitalize;
+  }
+
+  &:focus {
+    border-color: lightseagreen;
   }
 }
 
@@ -43,14 +48,23 @@ textarea {
   background-color: transparent;
   border-radius: 10px;
   border: 1px solid #333;
+  transition: all 0.3s ease-in-out;
 
   &::placeholder {
     text-transform: capitalize;
+  }
+
+  &:focus {
+    border-color: lightseagreen;
   }
 }
 
 button {
   color: #fff;
+}
+
+#root {
+  overflow: hidden;
 }
 
 .form {
