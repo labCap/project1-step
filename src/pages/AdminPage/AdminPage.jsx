@@ -8,6 +8,10 @@ import "./AdminPage.scss";
 export const AdminPage = () => {
   const { currentUser } = useContext(AuthContext);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="admin-page">
       <div className="admin-page__inner">
@@ -21,10 +25,12 @@ export const AdminPage = () => {
           <div className="user-name">{currentUser.displayName}</div>
           <Button func={() => signOut(auth)}>Log Out</Button>
         </div>
-        <form className="admin-page__body">
+        <form className="admin-page__body" onSubmit={handleSubmit}>
           <input type="text" placeholder="article title" />
           <textarea placeholder="article..."></textarea>
-          <Button className={"add-btn"}>Add</Button>
+          <Button className={"add-btn"} func={() => null}>
+            Add
+          </Button>
         </form>
       </div>
     </div>
