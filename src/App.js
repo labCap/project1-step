@@ -9,6 +9,7 @@ import { SignIn } from "./pages/SignIn/SignIn";
 import { LogIn } from "./pages/LogIn/LogIn";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
 import { AuthContext } from "./context/AuthContext";
+import { PostsPage } from "./pages/PostsPage/PostsPage";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -29,6 +30,14 @@ function App() {
               element={
                 <ProtectedRout>
                   <AdminPage />
+                </ProtectedRout>
+              }
+            />
+            <Route
+              path="/posts"
+              element={
+                <ProtectedRout>
+                  <PostsPage />
                 </ProtectedRout>
               }
             />

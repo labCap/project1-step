@@ -23,6 +23,21 @@
     margin-bottom: 30px;
   }
 
+  &__btn-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      font-size: 20px;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
   &__body {
     display: flex;
     flex-direction: column;
