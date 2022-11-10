@@ -1,6 +1,6 @@
 .admin-page {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +21,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+    gap: 20px;
+
+    @media (max-width: 425px) {
+      flex-direction: column;
+    }
   }
 
   &__btn-box {
