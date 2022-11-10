@@ -32,8 +32,15 @@ export const AdminPage = () => {
           </div>
         </div>
         <form className="admin-page__body" onSubmit={handleSubmit}>
-          <input type="text" placeholder="article title" />
-          <textarea placeholder="article..."></textarea>
+          <input
+            className="admin-page__input"
+            type="text"
+            placeholder="article title"
+          />
+          <textarea
+            className="admin-page__textarea"
+            placeholder="article..."
+          ></textarea>
           <Button className={"add-btn"} func={() => null}>
             Add
           </Button>
