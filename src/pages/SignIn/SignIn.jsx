@@ -7,10 +7,12 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { Button } from "../../components/Button/Button";
 import "./SignIn.scss";
+import { Load } from "../../components/Load/Load.jsx";
 
 export const SignIn = () => {
   // let [inputErr, setInputErr] = useState(false);
   let [err, setErr] = useState(false);
+  let [load, setLoad] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -33,6 +35,7 @@ export const SignIn = () => {
           setErr(true);
         },
         () => {
+          setLoad(true);
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
             await updateProfile(res.user, {
               displayName,
@@ -45,12 +48,12 @@ export const SignIn = () => {
               email,
               photoURL: downloadURL,
             });
-
             navigate("/");
           });
         }
       );
     } catch (err) {
+      setLoad(false);
       setErr(true);
     }
   };
@@ -58,26 +61,32 @@ export const SignIn = () => {
   return (
     <div className="sign-in">
       <form className="form" onSubmit={handleSubmit}>
-        <h2>Registration</h2>
-
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <label htmlFor="file">
-          <span className="plus"></span>
-          <span>{"Add photo (no .svg)"}</span>
-        </label>
-        <input
-          type="file"
-          placeholder="file"
-          id="file"
-          style={{ display: "none" }}
-        />
-        {err && <span className="error">Error</span>}
-        <Button func={() => null}>Sign In</Button>
-        <span>
-          Do you have an account? Go into it<Link to={"/log-in"}>Log in</Link>
-        </span>
+        {load ? (
+          <Load />
+        ) : (
+          <>
+            <h2>Registration</h2>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <label htmlFor="file">
+              <span className="plus"></span>
+              <span>{"Add photo (no .svg)"}</span>
+            </label>
+            <input
+              type="file"
+              placeholder="file"
+              id="file"
+              style={{ display: "none" }}
+            />
+            {err && <span className="error">Error</span>}
+            <Button func={() => null}>Sign In</Button>
+            <span>
+              Do you have an account? Go into it
+              <Link to={"/log-in"}>Log in</Link>
+            </span>
+          </>
+        )}
       </form>
     </div>
   );

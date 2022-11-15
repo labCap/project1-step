@@ -1,0 +1,36 @@
+.load {
+  font-size: 23px;
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 125%;
+    left: 0;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #fff;
+
+    animation: load 0.7s linear infinite alternate;
+  }
+}
+
+@keyframes load {
+  0% {
+    width: 15%;
+    left: 0;
+    background-color: tomato;
+  }
+  50% {
+    width: 70%;
+    left: 20%;
+    background-color: gold;
+  }
+  100% {
+    width: 15%;
+    left: 85%;
+    background-color: lightseagreen;
+  }
+}
