@@ -65,7 +65,7 @@ export const SignIn = () => {
         <input type="password" placeholder="Password" />
         <label htmlFor="file">
           <span className="plus"></span>
-          <span>Add photo</span>
+          <span>{"Add photo (no .svg)"}</span>
         </label>
         <input
           type="file"
